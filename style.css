@@ -1,0 +1,261 @@
+/* 
+reset margin and padding and box sizing for all elements
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+body{
+    background: url("images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container{
+     padding: 14px;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+}
+/* navbar */
+nav{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    text-transform: capitalize;
+    }
+
+nav ul {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+}
+nav ul li{
+display: block;
+text-decoration: none;
+list-style-type: none;
+text-align: center;
+}
+nav ul li a{
+    color: rgb(136, 131, 131);
+    text-decoration: none;
+    display: block;
+    transition: 0.2s all;
+}
+nav ul li a:hover{
+    color: white;
+    border-bottom: 2px solid white;
+    padding-bottom: 4px;
+}
+.active{
+    color: white;
+        border-bottom: 2px solid white;
+        padding-bottom: 4px;
+}
+
+button{
+    display: inline-block;
+    padding: 3px 5px ;
+    width: 210px;
+    border-radius: 21px;
+    background-color: rgb(48, 45, 45);
+    color: white;
+    text-transform: capitalize;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0.9;
+    transition: 0.2s all;
+}
+
+button:hover{
+    opacity: 1;
+}
+
+
+/* home page */
+
+
+#home{
+    display: flex;
+    justify-content: space-around;
+    height: 400px;
+    width: 100%;
+    padding: 15px;
+}
+
+#home .right{
+    flex: 50%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+#home .left{
+    flex: 50%;
+}
+
+#home .right img{
+    width: 100%;
+    height: 100%;
+    border-radius: 24px;
+    flex: 70%;
+}
+.circles{
+    flex: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+   
+}
+
+.circles .circle{
+    height: 10px;
+    background-color: white;
+    width: 10px; 
+    display: inline-block;
+    margin: 0 8px;
+    border-radius: 50%;
+}
+.parent-cactive-circle{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.active-circle{
+    position: absolute;
+    width:20px;
+    height:20px;
+    display: inline-block;
+    border-radius: 50%;
+    top:-5px;
+    left:-5px;
+   border:3px solid rgb(255, 255, 255);
+}
+
+#home .left{
+    flex: 45%;
+    color: white;
+    width: 100%;
+    height: 100%;
+    margin-right: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.left .top-section{
+    flex: 30%;
+    width: 100%;
+    text-transform: capitalize;
+    line-height: 1.5;
+   
+}
+.top-section h1{
+    font-size: 55px;
+    max-width: 250px;
+}
+
+.top-section p{
+    max-width: 300px;
+}
+
+.center-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+ .center-section-right ,.center-section-left{
+    background-color: rgb(49, 48, 48);
+    border-radius: 23px;
+    padding:10px 30px ;
+    width: 100%;
+    display: flex;
+    flex: 50%;
+    justify-content: space-between;
+    margin-left: 8px;
+ }
+ .center-section-left .text, .center-section-right .text{
+  text-transform: capitalize;
+  flex: 70%;
+ }
+
+
+.center-section-left .logo{
+   margin-right: 5px;
+   color: red;
+   border-radius: 50%;
+   font-size: 20px;
+}
+.center-section-right .logo{
+    font-size: 20px;
+    margin-right: 3px;
+    color: rgb(102, 102, 219);
+    border-radius: 50%;
+}
+
+
+@media (max-width:750px) {
+ nav{
+    justify-content: space-around;
+    margin-bottom: 100px;
+ }
+    nav ul{
+        display: none;
+    }
+    nav h2{
+        font-size: 15px;
+        max-width: 100%;
+    }
+    nav button{
+        width: 120px;
+    }
+    #home{
+        flex-direction: column-reverse;
+    }
+    #home .right,#home .left{
+        width: 100%;
+        flex: 70%;
+    }
+    .top-section{
+        margin-bottom: 15px;
+    }
+.top-section h1{
+font-size: 30px;
+max-width: 100%;
+text-align: center;
+}
+.top-section p{
+    max-width: 100%;
+}
+.center-section{
+    flex-direction: column;
+}
+.center-section-left,.center-section-right{
+    margin-bottom: 10px;
+}
+#home .right{
+margin: 25px 0;
+width: 100%;
+flex: 75%;
+}
+#home .right img{
+    width: 100%;
+}
+.circles{
+  margin: 27px 0;
+}
+}
+html{
+    height: 100%;
+}
